@@ -7,7 +7,7 @@
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 BUCKET = object-detection-demo
 PROFILE = default
-ENDPOINT = s3.in.chireiden.moe
+ENDPOINT = https://s3.in.chireiden.moe
 PROJECT_NAME = object_detection_demo
 PYTHON_INTERPRETER = python3
 
