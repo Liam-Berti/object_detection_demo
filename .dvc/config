@@ -2,3 +2,4 @@
     remote = storage
 ['remote "storage"']
     url = s3://object-detection-demo/dvcstore
+    endpointurl = https://s3.in.chireiden.moe
