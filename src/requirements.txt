@@ -1,0 +1,5 @@
+torch==1.9.0+cu111
+click==7.1.2
+pandas==1.2.5
+torchvision==0.10.0+cu111
+python-dotenv==0.19.2
