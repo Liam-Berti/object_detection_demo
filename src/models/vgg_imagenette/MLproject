@@ -1,0 +1,33 @@
+name: vgg_imagenette
+
+conda_env: conda.yaml
+
+entry_points:
+    main:
+        parameters:
+            data-path: {type: path, default: ../../../data/raw/imagenette2-320/}
+            batch-size: {type: int, default: 8}
+            valid-batch-size: {type: int, default: 8}
+            epochs: {type: int, default: 10}
+            lr: {type: float, default: 0.01}
+            momentum: {type: float, default: 0.5}
+            enable-cuda: {type: string, default: 'True'}
+            seed: {type: int, default: 5}
+            log-interval: {type: int, default: 100}
+            image-dimensions: {type: int, default: 160}
+            n-classes: {type: int, default: 10}
+        command: |
+            python -m train \
+                --data-path {data-path} \
+                --batch-size {batch-size} \
+                --valid-batch-size {valid-batch-size} \
+                --epochs {epochs} \
+                --lr {lr} \
+                --momentum {momentum} \
+                --enable-cuda {enable-cuda} \
+                --seed {seed} \
+                --log-interval {log-interval} \
+                --image-dimensions {image-dimensions} \
+                --n-classes {n-classes}
+
+            
